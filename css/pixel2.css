@@ -1,0 +1,42 @@
+header{
+    height: 75vh;
+}
+
+h1{
+    top: 18rem;
+    font-size: 6rem;
+}
+
+header h2{
+    top: 19rem;
+    font-size: 2rem;
+    width: 60%;
+}
+
+header #arrow{
+    height: 4.5rem;
+    width: 4.5rem;
+    top: 65%;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+}
+
+a.cv{
+    margin-top: 30rem;
+}
+
+
+/*section projet*/
+
+.Body p{
+    font-size: 1rem;
+}
+
+a.savoirPlus{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+
+}
+
+

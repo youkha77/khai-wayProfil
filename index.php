@@ -1,3 +1,22 @@
+<?php
+
+    $name = $email = $text = "";
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $name = verifyInput($_POST["name"]);
+        $email = verifyInput($_POST["email"]);
+        $text = verifyInput($_POST["text"]);
+    }
+
+    function verifyInput($var){
+        $var = trim($var);
+        $var = stripslashes($var);
+        $var = htmlspecialchars($var);
+        return $var;
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -265,18 +284,18 @@
         <h3>Email : khaiway.la@gmail.com</h3>
         
         <div id="form-div">
-            <form class="form" id="form1" method="post" action="" role="form">
+            <form class="form" id="form1" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> role="form">
               
               <p class="name">
-                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="<?php echo $name; ?>" />
               </p>
               
               <p class="email">
-                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="<?php echo $email; ?>" />
               </p>
               
               <p class="text">
-                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"><?php echo $text; ?></textarea>
               </p>
               
               
@@ -284,6 +303,9 @@
                 <input type="submit" value="Envoyer" id="button-blue"/>
                 <div class="ease"></div>
               </div>
+
+                <p class="thank-you">Votre message a bien été envoyé. Merci de m'avoir contacté.</p>
+
             </form>
           </div>
 

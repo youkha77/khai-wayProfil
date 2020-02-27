@@ -826,6 +826,15 @@ input:focus, textarea:focus {
   background-color:white;
 }
 
+.thank-you{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: 'Rajdhani';
+    font-size: 15px;
+}
+
+
 /* footer */
 
 #flexMedias{

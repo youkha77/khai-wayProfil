@@ -1,41 +1,3 @@
-<?php
-
-    $name = $email = $text = "";
-    $nameError = $emailError = $textError = "";
-
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $name = verifyInput($_POST["name"]);
-        $email = verifyInput($_POST["email"]);
-        $text = verifyInput($_POST["text"]);
-
-        if(empty($name)){
-           $nameError = "Je souhaite connaitre ton prénom";
-        }
-
-        if(empty($text)){
-            $textError = "un commentaire est obligatoire";
-        }
-
-        if(!isEmail($email)){
-            $emailError = "ton email n'est pas valide";
-        }
-    }
-
-    function isEmail($var){
-        return filter_var($var, FILTER_VALIDATE_EMAIL);
-    }
-
-    function verifyInput($var)
-    {
-        $var = trim($var);
-        $var = stripslashes($var);
-        $var = htmlspecialchars($var);
-        return $var;
-    }
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -164,7 +126,7 @@
                     <img src="ressources/3imgs2.jpg" alt="photo moi 2" class="composition_photo composition_photo--2">
                     <img src="ressources/3imgs3.jpg" alt="photo moi 3" class="composition_photo composition_photo--3">
                 </div>
-                <a href="/ressources/CV New CDI.pdf" class="cv" target="blank">Mon curriculum vitae</a>
+                <a href="ressources/CV New CDI.pdf" class="cv" target="blank">Mon curriculum vitae</a>
             </div>
         </div>
 
@@ -182,7 +144,7 @@
                <div class="Arrow" onclick="MakeCenter('Right');"><i class="fas fa-chevron-right"></i></div>
            </div>
             <div class="New" onclick="MakeCenter(this.id)" id="Left">
-              <img src="/ressources/linkgoals.jpg" alt="linkgoals">
+              <img src="ressources/linkgoals.jpg" alt="linkgoals">
               <div class="Info">
                 <div class="Header">
                  <p>LinkGoals</p>
@@ -190,7 +152,7 @@
                </div>
                 <div class="Body">
                  <p>Réalisation d'un menu animé en css et javascript pour une agence web</p>
-                 <a href="/ressources/LinkGoals/index.html" class="savoirPlus" target="blank">Accèder</a>
+                 <a href="ressources/LinkGoals/index.html" class="savoirPlus" target="blank">Accèder</a>
                </div>
               </div>
             </div>
@@ -218,7 +180,7 @@
                </div>
                 <div class="Body">
                  <p>Réalisation d'un menu en JavaScript pour une Agence</p>
-                 <a href="/ressources/sphere/index.html" class="savoirPlus" target="blank">Accèder</a>
+                 <a href="ressources/sphere/index.html" class="savoirPlus" target="blank">Accèder</a>
                </div>
               </div>
             </div>
@@ -304,32 +266,31 @@
         <h3>Email : khaiway.la@gmail.com</h3>
         
         <div id="form-div">
-            <form class="form" id="form1" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> role="form">
+            <form class="form" id="form1" method="post" action="" role="form">
               <div class="contactSection">
               <p class="name">
-                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="<?php echo $name; ?>" />
+                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="" />
               </p>
-                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"><?php echo $nameError;?></p>
+                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"></p>
                 </div>
             <div class="contactSection">
               <p class="email">
-                <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="<?php echo $email; ?>" />
+                <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="" />
               </p>
-                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"><?php echo $nameError;?></p>
+                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"></p>
             </div>
             <div class="contactSection">
               <p class="text">
-                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"><?php echo $text; ?></textarea>
+                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
               </p>
-                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"><?php echo $nameError;?></p>
+                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"></p>
             </div>
-              
+
               <div class="submit">
                 <input type="submit" value="Envoyer" id="button-blue"/>
                 <div class="ease"></div>
               </div>
 
-                <p class="thank-you">Votre message a bien été envoyé. Merci de m'avoir contacté.</p>
 
             </form>
           </div>
@@ -356,6 +317,7 @@
 
 <script src="js/app.js"></script>
 <script src="js/greenSock.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

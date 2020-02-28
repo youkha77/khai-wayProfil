@@ -1,47 +1,48 @@
 <?php
 
-$name = $email = $text = "";
-$nameError = $emailError = $textError = "";
-$isSuccess = false;
+$array = array("name" => "", "email" => "", "text" => "", "nameError" => "", "emailError"=> "", "textError"=> "", "isSuccess"=> false);
+
 $emailTo = 'khaiway.la@gmail.com';
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $name = verifyInput($_POST["name"]);
-    $email = verifyInput($_POST["email"]);
-    $text = verifyInput($_POST["text"]);
-    $isSuccess = true;
+    $array["name"] = verifyInput($_POST["name"]);
+    $array["email"] = verifyInput($_POST["email"]);
+    $array["text"] = verifyInput($_POST["text"]);
+    $array["isSuccess"] = true;
     $emailText = "";
 
-    if(empty($name)){
-        $nameError = "Je souhaite connaitre ton prénom";
-        $isSuccess = false;
+    if(empty($array["name"])){
+        $array["nameError"] = "Je souhaite connaitre ton prénom";
+        $array["isSuccess"] = false;
     }
     else{
-        $emailText .= "name: $name\n";
+        $emailText .= "name: {$array["name"]}\n";
     }
 
 
-    if(empty($text)){
-        $textError = "un commentaire est obligatoire";
-        $isSuccess = false;
+    if(empty($array["text"])){
+        $array["textError"] = "un commentaire est obligatoire";
+        $array["isSuccess"] = false;
     }
     else{
-        $emailText .= "text: $text\n";
+        $emailText .= "text: {$array["text"]}\n";
     }
 
-    if(!isEmail($email)){
-        $emailError = "ton email n'est pas valide";
-        $isSuccess = false;
+    if(!isEmail($array["email"])){
+        $array["emailError"] = "ton email n'est pas valide";
+        $array["isSuccess"] = false;
     }else{
-        $emailText .= "email: $email\n";
+        $emailText .= "email: {$array["email"]}\n";
     }
 
-    if($isSuccess){
-        $headers = "From: $name <$email>\r\nReplyTo: $email";
+    if($array["isSuccess"]){
+        $headers = "From: {$array["name"]} <{$array["email"]}>\r\nReplyTo: {$array["email"]}";
         mail($emailTo, "un message de votre site", $emailText, $headers);
-        $name = $email = $text = "";
     }
+
+    echo json_encode($array);
+
 }
 
 function isEmail($var){

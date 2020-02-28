@@ -29,7 +29,7 @@
     <link rel="stylesheet" media="only screen and (width: 414px) and (height: 736px)" href="css/iPhone6_7_8PLUS.css">
     <link rel="stylesheet" media="only screen and (width: 1024px) and (height: 1366px)" href="css/iPadPro.css">
 
-  
+
 
     <!-- icone -->
     <script src="https://kit.fontawesome.com/81463bf663.js" crossorigin="anonymous"></script>
@@ -266,7 +266,7 @@
         <h3>Email : khaiway.la@gmail.com</h3>
         
         <div id="form-div">
-            <form class="form" id="form1" method="post" action="" role="form">
+            <form id="contact-form" method="post" action="" role="form">
               <div class="contactSection">
               <p class="name">
                 <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="" />

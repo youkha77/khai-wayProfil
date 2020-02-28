@@ -1,13 +1,33 @@
 <?php
 
     $name = $email = $text = "";
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $nameError = $emailError = $textError = "";
+
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
         $name = verifyInput($_POST["name"]);
         $email = verifyInput($_POST["email"]);
         $text = verifyInput($_POST["text"]);
+
+        if(empty($name)){
+           $nameError = "Je souhaite connaitre ton prénom";
+        }
+
+        if(empty($text)){
+            $textError = "un commentaire est obligatoire";
+        }
+
+        if(!isEmail($email)){
+            $emailError = "ton email n'est pas valide";
+        }
     }
 
-    function verifyInput($var){
+    function isEmail($var){
+        return filter_var($var, FILTER_VALIDATE_EMAIL);
+    }
+
+    function verifyInput($var)
+    {
         $var = trim($var);
         $var = stripslashes($var);
         $var = htmlspecialchars($var);
@@ -285,19 +305,24 @@
         
         <div id="form-div">
             <form class="form" id="form1" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> role="form">
-              
+              <div class="contactSection">
               <p class="name">
                 <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="<?php echo $name; ?>" />
               </p>
-              
+                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"><?php echo $nameError;?></p>
+                </div>
+            <div class="contactSection">
               <p class="email">
-                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="<?php echo $email; ?>" />
+                <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="<?php echo $email; ?>" />
               </p>
-              
+                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"><?php echo $nameError;?></p>
+            </div>
+            <div class="contactSection">
               <p class="text">
                 <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"><?php echo $text; ?></textarea>
               </p>
-              
+                <p class="messageError" style="font-size: 15px; font-family: 'Rajdhani';"><?php echo $nameError;?></p>
+            </div>
               
               <div class="submit">
                 <input type="submit" value="Envoyer" id="button-blue"/>

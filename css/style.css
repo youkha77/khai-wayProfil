@@ -607,6 +607,7 @@ a.savoirPlus:hover{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column: 1 / span 12;
+
 }
 .projet-left .box {
     grid-column: 3 / span 5;
@@ -833,6 +834,7 @@ input:focus, textarea:focus {
     font-family: 'Rajdhani';
     font-size: 15px;
 }
+
 
 
 /* footer */

@@ -429,14 +429,15 @@ a.savoirPlus{
 @media(max-width: 1200px){
 
     #capable{
-        height: 70rem;
+        height: 120rem;
     }
+
 }
 
 @media(max-width: 992px){
 
     #capable{
-        height: 65rem;
+        height: 92rem;
     }
 
     #capable h3{
@@ -456,7 +457,7 @@ a.savoirPlus{
 @media(max-width: 768px){
 
     #capable{
-        height: 180rem;
+        height: 80rem;
         padding-bottom: 5rem;
     }
 
@@ -487,7 +488,7 @@ a.savoirPlus{
 @media(max-width: 425px){
 
     #capable{
-        height: 80rem;     
+        height: 85rem;
     }
     
     .projet-left .box {

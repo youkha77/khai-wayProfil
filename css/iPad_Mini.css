@@ -1,28 +1,28 @@
 header{
-    height: 70vh;
+    height: 100vh;
 }
 
 h1{
-    top: 20rem;
-    font-size: 6.5rem;
+    top: 22rem;
+    font-size: 11rem;
 }
 
 header h2{
-    top: 20rem;
-    font-size: 3rem;
-    width: 50%;
+    top: 25rem;
+    font-size: 4rem;
+    width: 60%;
 }
 
 header #arrow{
     height: 5.5rem;
     width: 5.5rem;
-    top: 60%;
+    top: 55%;
     font-size: 3rem;
     line-height: 5.5rem;
 }
 
 a.cv{
-    margin-top: 40rem;
+    margin-top: 50rem;
 }
 
 #capable{

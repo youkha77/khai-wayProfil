@@ -28,6 +28,7 @@
     <link rel="stylesheet" media="only screen and (width: 375px) and (height: 667px)" href="css/iPhone6_7_8.css">
     <link rel="stylesheet" media="only screen and (width: 414px) and (height: 736px)" href="css/iPhone6_7_8PLUS.css">
     <link rel="stylesheet" media="only screen and (width: 1024px) and (height: 1366px)" href="css/iPadPro.css">
+    <link rel="stylesheet" media="only screen and (width: 375px) and (height: 812px)" href="css/iPhoneX.css">
 
 
 
@@ -86,7 +87,7 @@
                 <p class="paragraphe">
                     Je m'appelle Khai-way, je suis webdesigner et développeur web depuis peu suite à une reconversion profesionnelle.
                     Passionné et curieux par le développement web, j'aime expérimenter, découvrir et apprendre des nouvelles technologies.
-                    Je me suis auto-formé sur les techniques de création web pour ensuite completer par une formation dans une ecole multimédia.
+                    Je me suis auto-formé sur les techniques de création web pour ensuite completer par une formation dans une école multimédia.
                     Actuellement je suis à la recherche d'un poste afin de pouvoir vous apportez un atout supplémentaire au sein de votre équipe.
                 </p>
                 <h3 class="sousTitreAbout"><i class="fas fa-code"></i>

@@ -1,5 +1,5 @@
 header{
-    height: 85vh;
+    height: 90vh;
 }
 
 h1{
@@ -10,15 +10,15 @@ h1{
 header h2{
     top: 20rem;
     font-size: 1.8rem;
-    width: 50%;
-    margin-left: 2rem;
+    width: 60%;
+    margin-left: 4rem;
 }
 
 header #arrow{
     height: 3.5rem;
     width: 3.5rem;
     top: 75%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 3.5rem;
 }
 

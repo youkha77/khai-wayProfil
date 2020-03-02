@@ -1,0 +1,23 @@
+header{
+    height: 100vh;
+}
+
+h1{
+    top: 20rem;
+    font-size: 6rem;
+}
+
+header h2{
+    top: 25rem;
+    font-size: 2rem;
+    width: 65%;
+
+}
+
+header #arrow{
+    height: 3.5rem;
+    width: 3.5rem;
+    top: 50%;
+    font-size: 2rem;
+    line-height: 3.5rem;
+}

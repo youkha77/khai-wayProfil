@@ -86,9 +86,9 @@
                 </h3>
                 <p class="paragraphe">
                     Je m'appelle Khai-way, je suis webdesigner et développeur web depuis peu suite à une reconversion profesionnelle.
-                    Passionné et curieux par le développement web, j'aime expérimenter, découvrir et apprendre des nouvelles technologies.
-                    Je me suis auto-formé sur les techniques de création web pour ensuite completer par une formation dans une école multimédia.
-                    Actuellement je suis à la recherche d'un poste afin de pouvoir vous apportez un atout supplémentaire au sein de votre équipe.
+                    Passionné par le développement web, j'aime expérimenter, découvrir et apprendre des nouvelles technologies.
+                    Je me suis auto-formé sur les techniques de création web pour ensuite compléter par une formation dans une école multimédia.
+                    Actuellement je suis à la recherche d'un poste afin de pouvoir vous apporter un atout supplémentaire au sein de votre équipe.
                 </p>
                 <h3 class="sousTitreAbout"><i class="fas fa-code"></i>
                     Compétences techniques
@@ -213,7 +213,7 @@
     <section id="capable">
         <h3>Services</h3>
         <hr>
-        <p>Je souhaite faire partir de votre aventure de part mes nombreuses capacités de :</p>
+        <p>Je souhaite faire parti de votre aventure de part mes nombreuses capacités de :</p>
         
         <div class="containerFlexTeam">
            <section>

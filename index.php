@@ -88,7 +88,7 @@
                     Je m'appelle Khai-way, je suis webdesigner et développeur web depuis peu suite à une reconversion profesionnelle.
                     Passionné par le développement web, j'aime expérimenter, découvrir et apprendre des nouvelles technologies.
                     Je me suis auto-formé sur les techniques de création web pour ensuite compléter par une formation dans une école multimédia.
-                    Actuellement je suis à la recherche d'un poste afin de pouvoir vous apporter un atout supplémentaire au sein de votre équipe.
+              
                 </p>
                 <h3 class="sousTitreAbout"><i class="fas fa-code"></i>
                     Compétences techniques
